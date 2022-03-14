@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "272508860956",
+    "project_id": "fir-darik",
+    "storage_bucket": "fir-darik.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272508860956:android:a295978ff08a977c8abdd9",
+        "android_client_info": {
+          "package_name": "com.darik.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272508860956-gliq8g526mrmqmjb6l8ia4lebf8godqd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrTa5b1b7m9dORsgcEqfkxv4xBqrcUdLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "272508860956-gliq8g526mrmqmjb6l8ia4lebf8godqd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
