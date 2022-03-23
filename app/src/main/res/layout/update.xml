@@ -8,29 +8,30 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/textInputLayout3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="328dp"
+        android:layout_height="79dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="199dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputNama"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Nama"
+            android:layout_width="328dp"
+            android:layout_height="79dp"
             android:background="@color/design_default_color_on_primary"
+            android:hint="Nama Barang"
             android:inputType="text"
             android:textColorHint="#022222" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_width="328dp"
+        android:layout_height="79dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,11 +40,27 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputStatus"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_width="328dp"
+            android:layout_height="79dp"
             android:background="@color/design_default_color_on_primary"
-            android:hint="Status"
+            android:hint="Jumlah Barang"
             android:inputType="text"
             android:textColorHint="#022222" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:fontFamily="@font/akaya_telivigala"
+        android:text="Update Data"
+        android:textColor="@color/teal_700"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

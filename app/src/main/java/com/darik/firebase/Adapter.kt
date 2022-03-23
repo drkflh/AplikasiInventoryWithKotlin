@@ -52,7 +52,7 @@ class Adapter(val mCtx: Context, val layoutResId: Int, val list: List<Users> )
         progressDialog.show()
         val mydatabase = FirebaseDatabase.getInstance().getReference("USERS")
         mydatabase.child(user.id).removeValue()
-        Toast.makeText(mCtx,"Deleted!!",Toast.LENGTH_SHORT).show()
+        Toast.makeText(mCtx,"Data Berhasil Di Hapus",Toast.LENGTH_SHORT).show()
         val intent = Intent(context, show::class.java)
         context.startActivity(intent)
     }
@@ -60,7 +60,7 @@ class Adapter(val mCtx: Context, val layoutResId: Int, val list: List<Users> )
     private fun showUpdateDialog(user: Users) {
         val builder = AlertDialog.Builder(mCtx)
 
-        builder.setTitle("Update")
+        builder.setTitle("Data Berhasil Di Update")
 
         val inflater = LayoutInflater.from(mCtx)
 
@@ -74,7 +74,7 @@ class Adapter(val mCtx: Context, val layoutResId: Int, val list: List<Users> )
 
         builder.setView(view)
 
-        builder.setPositiveButton("Update") { dialog, which ->
+        builder.setPositiveButton("Data Berhasil Di Update") { dialog, which ->
 
             val dbUsers = FirebaseDatabase.getInstance().getReference("USERS")
 
@@ -83,13 +83,13 @@ class Adapter(val mCtx: Context, val layoutResId: Int, val list: List<Users> )
             val status = textStatus.text.toString().trim()
 
             if (nama.isEmpty()){
-                textNama.error = "please enter name"
+                textNama.error = "Masukan Nama Barang Dengan Benar"
                 textNama.requestFocus()
                 return@setPositiveButton
             }
 
             if (status.isEmpty()){
-                textStatus.error = "please enter status"
+                textStatus.error = "Masukan Stok Barang Dengan Benar"
                 textStatus.requestFocus()
                 return@setPositiveButton
             }
@@ -97,7 +97,7 @@ class Adapter(val mCtx: Context, val layoutResId: Int, val list: List<Users> )
             val user = Users(user.id,nama,status)
 
             dbUsers.child(user.id).setValue(user).addOnCompleteListener {
-                Toast.makeText(mCtx,"Updated",Toast.LENGTH_SHORT).show()
+                Toast.makeText(mCtx,"Data Berhasil Di Update",Toast.LENGTH_SHORT).show()
             }
 
         }
